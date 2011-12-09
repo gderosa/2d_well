@@ -1,0 +1,39 @@
+set multiplot
+set samples 200
+set isosamples 100
+       #set hidden3d
+       set pm3d corners2color c1
+       #set style line 100 lt 2 lw 0.5
+       #unset hidden3d
+       #set surf
+
+
+# a patch was applied to Gnuplot 4.2
+# http://sourceforge.net/tracker/index.php?func=detail&aid=1646788&group_id=2055&atid=302055
+# at the moment, this functionality's not included in the official release
+
+#splot '+' using 1:2:(abs(psi($1,$2))**2):(arg(psi($1,$2))) w pm3d at s
+
+## HEY! 
+
+#    ||
+#    \/
+
+# feature under heavy development: maybe you need '+', or
+# maybe you need '++' 
+# :-P
+# http://sourceforge.net/tracker/index.php?func=detail&aid=1872528&group_id=2055&atid=302055   (message from sfeam @ 2008-01-24 06:43 )
+
+splot '++' using 1:2:(abs(psi($1,$2))**2):(arg(psi($1,$2))) w pm3d at s
+
+
+
+
+set isosamples 15
+set samples 85
+#set hidden3d
+unset ztics
+#set style line 6 lw 0.1
+splot abs(psi(x,y))**2 w dots lt 7 
+unset multiplot
+set ztics

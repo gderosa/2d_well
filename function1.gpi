@@ -1,0 +1,11 @@
+
+set zrange[0:0.65]
+
+psi(x,y)=(2./pi)*(\
+    cos(x)  *cos(y)*exp(-2*i*t)         		*sqrt(.2)+\
+    sin(2*x)*cos(y)*exp(-5*i*t)         		*sqrt(.4)+\
+    cos(x)*sin(2*y)*exp(-5*i*t)         		*sqrt(.4)\
+)
+
+
+

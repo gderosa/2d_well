@@ -1,0 +1,26 @@
+reset
+unset key
+#set size square
+set terminal png #crop
+i={0,1}
+#phi(x,y)=arg(x+i*y)
+#r(x,y)=sqrt(x*x+y*y)
+
+set palette defined (\
+    -pi "#2222BB", -pi/2 "#332240", 0 "#923030", pi/2 "#606060", pi "#2222BB")
+#set palette defined (\
+#    -pi "#2222BB",                   0 "#923030", pi/2 "#707040", pi "#2222BB")
+   
+set ticslevel 0    
+set view 30,8,1.1,1.1
+set cbrange[-pi:pi]
+set xrange[-pi/2:pi/2]
+set yrange[-pi/2:pi/2]
+
+set cbtics ("-pi" -pi, "-pi/2" -pi/2, "0" 0, "pi/2" pi/2, "pi" pi)
+set cblabel "Arg"  offset -12.5,3
+
+
+
+
+
